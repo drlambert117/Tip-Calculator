@@ -7,6 +7,16 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
     <script>
+        //---------------------------------------------------------
+        //Ready Function
+        //---------------------------------------------------------
+        $(document).ready(function () {
+            console.log("Ready function called.");
+
+            $("#calculateButton").on("click", calculateResult);
+
+        });
+
 
         //---------------------------------------------------------
         // name: calculateResult()
@@ -101,24 +111,25 @@
 <body style="margin:20px;">
 
 
-    <h1>Tip Calculator</h1>
+    <h1>Tip Calculator</h1> <br />
 
 
     <div id="divInputDisplay">
-        <label for="billAmountInput">Bill Amount</label>
+        <label for="billAmountInput">Bill Amount</label> <br />
         <input type="text" id="billAmountInput" value="100" />
         <br />
-
-        <label for="numberOfPeopleInput">Number of People Splitting Bill</label>
+        <br />
+        <label for="numberOfPeopleInput">Number of People Splitting Bill</label> <br />
         <input type="text" id="numberOfPeopleInput" value="2" />
         <br />
-
+        <br />
         <input type="checkbox" id="goodServiceCheckbox" />
         <label for="goodServiceCheckbox">Extra 5% for Good Service</label>
 
         <br />
         <br />
-        <input type="button" id="calculateButton" value="Display Results" onclick="calculateResult()" />
+        <!--<input type="button" id="calculateButton" value="Display Results" onclick="calculateResult()" />-->
+        <button id="calculateButton" class="btn-default">Display Results</button>
 
     </div>
 
