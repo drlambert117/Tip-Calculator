@@ -94,9 +94,9 @@
             console.log("individualShare = " + individualShare);
 
             //4.Display Results
-            document.getElementById("billTotalDisplay").innerHTML = billTotal.toFixed(2);
+            document.getElementById("billTotalDisplay").innerHTML = "$" + billTotal.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
-            document.getElementById("individualShareDisplay").innerHTML = individualShare.toFixed(2);
+            document.getElementById("individualShareDisplay").innerHTML = "$" + individualShare.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
 
         }
@@ -105,45 +105,53 @@
         body {
             margin: 20px;
             background-color: #EEEEEE;
+            text-align: center;
         }
+
+        label {
+            font-size:medium;
+        }
+
     </style>
 </head>
-<body style="margin:20px;">
+<body>
+
+    <div class="container-fluid">
+
+        <div class="jumbotron">
+            <h2>Tip Calculator</h2>
+        </div>
+
+        <div id="divInputDisplay">
+            <label for="billAmountInput">Bill Amount</label> <br />
+            <input type="text" id="billAmountInput" value="100" />
+            <br />
+            <br />
+            <label for="numberOfPeopleInput">Number of People Splitting Bill</label> <br />
+            <input type="text" id="numberOfPeopleInput" value="2" />
+            <br />
+            <br />
+            <input type="checkbox" id="goodServiceCheckbox" />
+            <label for="goodServiceCheckbox">Extra 5% for Good Service</label>
+
+            <br />
+            <br />
+            <button id="calculateButton" class="btn btn-info">Display Results</button>
+
+        </div>
+
+        <div id="divResultsDisplay">
+            <br />
+            <br />
+            <label for="billTotal">Total Bill:</label>
+            <span id="billTotalDisplay"></span>
+
+            <br />
+            <label for="individualShare">Individual Share:</label>
+            <span id="individualShareDisplay"></span>
 
 
-    <h1>Tip Calculator</h1> <br />
-
-
-    <div id="divInputDisplay">
-        <label for="billAmountInput">Bill Amount</label> <br />
-        <input type="text" id="billAmountInput" value="100" />
-        <br />
-        <br />
-        <label for="numberOfPeopleInput">Number of People Splitting Bill</label> <br />
-        <input type="text" id="numberOfPeopleInput" value="2" />
-        <br />
-        <br />
-        <input type="checkbox" id="goodServiceCheckbox" />
-        <label for="goodServiceCheckbox">Extra 5% for Good Service</label>
-
-        <br />
-        <br />
-        <!--<input type="button" id="calculateButton" value="Display Results" onclick="calculateResult()" />-->
-        <button id="calculateButton" class="btn-default">Display Results</button>
-
-    </div>
-
-    <div id="divResultsDisplay">
-        <br />
-        <br />
-        <label for="billTotal">Total Bill:</label>
-        <span id="billTotalDisplay"></span>
-
-        <br />
-        <label for="individualShare">Individual Share:</label>
-        <span id="individualShareDisplay"></span>
-
-
+        </div>
     </div>
 
 </body>
