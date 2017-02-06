@@ -5,11 +5,8 @@
     <meta charset="utf-8" />
     <!--Set viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
     <!--Link to bootstrap file-->
-=======
     <!--Link to BootStrap.css-->
->>>>>>> refs/remotes/origin/master
     <link rel="stylesheet" href="BootStrap.css" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
@@ -18,7 +15,7 @@
         //Ready Function
         //---------------------------------------------------------
         $(document).ready(function () {
-            console.log("Ready function called.");
+            console.log('%c Success %c Ready function called.', 'color: white; background-color: green', '');
 
             $("#calculateButton").on("click", calculateResult);
 
@@ -29,7 +26,7 @@
         // name: calculateResult()
         //---------------------------------------------------------
         function calculateResult() {
-            console.log("calculateResult function called");
+            console.log("%c Success %c calculateResult function called", 'color: white; background-color: green', '');
 
             //1.Declare Variables
             var billAmount,
