@@ -10,5 +10,5 @@ Created as an assignment for a Front-End Development class.
 - <a href='https://jquery.com/'>jQuery</a>
 - <a href='https://getbootstrap.com/'>Bootstrap</a>
 
-## Running the project
+## Running the project locally.
 After cloning the repository, navigate to the 'tip-calculator' folder using a file explorer and run the 'index.html' file.
